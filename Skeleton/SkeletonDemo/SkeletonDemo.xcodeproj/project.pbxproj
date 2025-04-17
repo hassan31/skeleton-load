@@ -6,10 +6,6 @@
 	objectVersion = 77;
 	objects = {
 
-/* Begin PBXBuildFile section */
-		0E68FE1B2DB085A90071CCBA /* SkeletonLoad in Frameworks */ = {isa = PBXBuildFile; productRef = 0E68FE1A2DB085A90071CCBA /* SkeletonLoad */; };
-/* End PBXBuildFile section */
-
 /* Begin PBXFileReference section */
 		0E68FE082DB0858F0071CCBA /* SkeletonDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SkeletonDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -27,7 +23,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0E68FE1B2DB085A90071CCBA /* SkeletonLoad in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,7 +65,6 @@
 			);
 			name = SkeletonDemo;
 			packageProductDependencies = (
-				0E68FE1A2DB085A90071CCBA /* SkeletonLoad */,
 			);
 			productName = SkeletonDemo;
 			productReference = 0E68FE082DB0858F0071CCBA /* SkeletonDemo.app */;
@@ -101,7 +95,6 @@
 			mainGroup = 0E68FDFF2DB0858F0071CCBA;
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
-				0E68FE192DB085A90071CCBA /* XCRemoteSwiftPackageReference "skeleton-load" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 0E68FE092DB0858F0071CCBA /* Products */;
@@ -331,25 +324,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		0E68FE192DB085A90071CCBA /* XCRemoteSwiftPackageReference "skeleton-load" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/hassan31/skeleton-load";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.0.0;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		0E68FE1A2DB085A90071CCBA /* SkeletonLoad */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 0E68FE192DB085A90071CCBA /* XCRemoteSwiftPackageReference "skeleton-load" */;
-			productName = SkeletonLoad;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 0E68FE002DB0858F0071CCBA /* Project object */;
 }
