@@ -337,8 +337,8 @@
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/hassan31/skeleton-load";
 			requirement = {
-				kind = revision;
-				revision = 56baee865169917e53c4b41d27dae4e701826d9b;
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
