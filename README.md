@@ -19,7 +19,7 @@ A SwiftUI package for displaying skeleton loading views with shimmer effects.
 
 Add the package to your project using Xcode:
 1. File > Add Packages...
-2. Enter the repository URL: `https://github.com/yourusername/SkeletonUI.git`
+2. Enter the repository URL: `https://github.com/hassan31/skeleton-load`
 
 Or add it to your `Package.swift` dependencies:
 
