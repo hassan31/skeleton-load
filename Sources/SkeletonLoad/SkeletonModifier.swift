@@ -7,58 +7,70 @@
 
 import SwiftUI
 
-public struct SkeletonView: ViewModifier {
-    @Binding public var isLoading: Bool
-    @State private var isInitialState = true
+public struct SkeletonModifier: ViewModifier {
+    @Binding var isLoading: Bool
+    private let enableFallback: Bool
     
-    private let animation: Animation
-    private let gradient: Gradient
-    private let min, max: CGFloat
-    
-    public init(isLoading: Binding<Bool>,
-                animation: Animation = Animation.linear(duration: 1.5).repeatForever(autoreverses: false),
-                gradient: Gradient = Gradient(stops: [
-                    .init(color: .gray, location: 0.1),
-                    .init(color: .gray.opacity(0.3), location: 0.4),
-                    .init(color: .gray, location: 0.6)
-                ]),
-                bandSize: CGFloat = 0.3) {
-        self.animation = animation
-        self.gradient = gradient
-        self.min = 0 - bandSize
-        self.max = 1 + bandSize
-        self._isLoading = isLoading
+    public init(isLoading: Binding<Bool>, enableFallback: Bool) {
+        _isLoading = isLoading
+        self.enableFallback = enableFallback
     }
     
     public func body(content: Content) -> some View {
+        content
+            .padding()
+            .background(.quaternary, in: Capsule())
+    }
+}
+
+struct SkeletonView<Content: View>: View {
+    @Binding private var isLoading: Bool
+    private let content: () -> Content
+    private let enableFallback: Bool
+    private let fade = AnyTransition.opacity.animation(.linear(duration: 0.5))
+    
+    init(isLoading: Binding<Bool>, content: @escaping () -> Content, enableFallback: Bool) {
+        _isLoading = isLoading
+        self.content = content
+        self.enableFallback = enableFallback
+    }
+    
+    var body: some View {
         if isLoading {
-            content
+            content()
                 .redacted(reason: .placeholder)
-                .overlay(
-                    Rectangle()
-                        .modifier(AnimatedMask(animation: animation, gradient: gradient, min: min, max: max))
-                        .opacity(isInitialState ? 0 : 1)
-                )
-                .onAppear {
-                    DispatchQueue.main.async {
-                        withAnimation {
-                            isInitialState = false
-                        }
-                    }
-                }
+                .modifier(Shimmer(duration: 1.5, bounce: false))
+                .disabled(true)
+                .transition(fade)
         } else {
-            content
+            if enableFallback {
+                content()
+                    .transition(fade)
+            } else {
+                content()
+            }
         }
     }
 }
 
-extension SkeletonView {
+struct Shimmer: ViewModifier {
+    @State private var phase: CGFloat = .zero
+    var duration = 1.5
+    var bounce = false
+    
+    func body(content: Content) -> some View {
+        content
+            .modifier(
+                AnimatedMask(phase: phase)
+                    .animation(.linear(duration: duration).repeatForever(autoreverses: bounce))
+            )
+            .onAppear {
+                phase = 0.8
+            }
+    }
+    
     struct AnimatedMask: AnimatableModifier {
-        @State private var phase: CGFloat = 0
-        let animation: Animation
-        let gradient: Gradient
-        let min: CGFloat
-        let max: CGFloat
+        var phase: CGFloat = .zero
         
         var animatableData: CGFloat {
             get { phase }
@@ -67,20 +79,24 @@ extension SkeletonView {
         
         func body(content: Content) -> some View {
             content
-                .mask(
-                    LinearGradient(
-                        gradient: gradient,
-                        startPoint: .leading,
-                        endPoint: .trailing
-                    )
-                    .scaleEffect(3)
-                    .offset(x: phase)
-                )
-                .onAppear {
-                    withAnimation(animation) {
-                        phase = max
-                    }
-                }
+                .mask(GradientMask(phase: phase).scaleEffect(3))
+        }
+    }
+    
+    struct GradientMask: View {
+        let phase: CGFloat
+        let centerColor = Color.black
+        let edgeColor = Color.black.opacity(0.3)
+        var body: some View {
+            LinearGradient(
+                stops: [
+                    .init(color: edgeColor, location: phase),
+                    .init(color: centerColor, location: phase + 0.1),
+                    .init(color: edgeColor, location: phase + 0.2)
+                ],
+                startPoint: .topLeading,
+                endPoint: .bottomTrailing
+            )
         }
     }
 }
