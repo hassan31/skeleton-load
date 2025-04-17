@@ -6,6 +6,10 @@
 
 A SwiftUI package for displaying skeleton loading views with shimmer effects.
 
+## 📱 Demo
+
+[![bpERD.gif](https://s6.gifyu.com/images/bpERD.gif)](https://gifyu.com/image/bpERD)
+
 ## Features
 
 - Easy-to-use modifier for any SwiftUI view
