@@ -2,7 +2,7 @@
 import PackageDescription
 
 let package = Package(
-    name: "SkeletonLoad",
+    name: "Skeleton",
     platforms: [
         .iOS(.v15),
         .macOS(.v12),
@@ -11,7 +11,7 @@ let package = Package(
     ],
     products: [
         .library(
-            name: "SkeletonLoad",
+            name: "Skeleton",
             targets: ["SkeletonLoad"]),
     ],
     targets: [
