@@ -7,12 +7,11 @@
 	objects = {
 
 /* Begin PBXFileReference section */
-		0E8863222DB0788B00D26262 /* SkeletonLoadDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SkeletonLoadDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		0E8863342DB078AD00D26262 /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Package.swift; path = ../Package.swift; sourceTree = "<group>"; };
+		0E68FDAB2DB07F800071CCBA /* SkeletonLoadDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SkeletonLoadDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		0E8863242DB0788B00D26262 /* SkeletonLoadDemo */ = {
+		0E68FDAD2DB07F800071CCBA /* SkeletonLoadDemo */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = SkeletonLoadDemo;
 			sourceTree = "<group>";
@@ -20,7 +19,7 @@
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		0E88631F2DB0788B00D26262 /* Frameworks */ = {
+		0E68FDA82DB07F800071CCBA /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -30,92 +29,83 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0E8863192DB0788B00D26262 = {
+		0E68FDA22DB07F800071CCBA = {
 			isa = PBXGroup;
 			children = (
-				0E8863242DB0788B00D26262 /* SkeletonLoadDemo */,
-				0E8863332DB078AD00D26262 /* Frameworks */,
-				0E8863232DB0788B00D26262 /* Products */,
+				0E68FDAD2DB07F800071CCBA /* SkeletonLoadDemo */,
+				0E68FDAC2DB07F800071CCBA /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		0E8863232DB0788B00D26262 /* Products */ = {
+		0E68FDAC2DB07F800071CCBA /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				0E8863222DB0788B00D26262 /* SkeletonLoadDemo.app */,
+				0E68FDAB2DB07F800071CCBA /* SkeletonLoadDemo.app */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		0E8863332DB078AD00D26262 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				0E8863342DB078AD00D26262 /* Package.swift */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		0E8863212DB0788B00D26262 /* SkeletonLoadDemo */ = {
+		0E68FDAA2DB07F800071CCBA /* SkeletonLoadDemo */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0E8863302DB0788D00D26262 /* Build configuration list for PBXNativeTarget "SkeletonLoadDemo" */;
+			buildConfigurationList = 0E68FDB92DB07F820071CCBA /* Build configuration list for PBXNativeTarget "SkeletonLoadDemo" */;
 			buildPhases = (
-				0E88631E2DB0788B00D26262 /* Sources */,
-				0E88631F2DB0788B00D26262 /* Frameworks */,
-				0E8863202DB0788B00D26262 /* Resources */,
+				0E68FDA72DB07F800071CCBA /* Sources */,
+				0E68FDA82DB07F800071CCBA /* Frameworks */,
+				0E68FDA92DB07F800071CCBA /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				0E8863242DB0788B00D26262 /* SkeletonLoadDemo */,
+				0E68FDAD2DB07F800071CCBA /* SkeletonLoadDemo */,
 			);
 			name = SkeletonLoadDemo;
 			packageProductDependencies = (
 			);
 			productName = SkeletonLoadDemo;
-			productReference = 0E8863222DB0788B00D26262 /* SkeletonLoadDemo.app */;
+			productReference = 0E68FDAB2DB07F800071CCBA /* SkeletonLoadDemo.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		0E88631A2DB0788B00D26262 /* Project object */ = {
+		0E68FDA32DB07F800071CCBA /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1620;
 				LastUpgradeCheck = 1620;
 				TargetAttributes = {
-					0E8863212DB0788B00D26262 = {
+					0E68FDAA2DB07F800071CCBA = {
 						CreatedOnToolsVersion = 16.2;
 					};
 				};
 			};
-			buildConfigurationList = 0E88631D2DB0788B00D26262 /* Build configuration list for PBXProject "SkeletonLoadDemo" */;
+			buildConfigurationList = 0E68FDA62DB07F800071CCBA /* Build configuration list for PBXProject "SkeletonLoadDemo" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 				Base,
 			);
-			mainGroup = 0E8863192DB0788B00D26262;
+			mainGroup = 0E68FDA22DB07F800071CCBA;
 			minimizedProjectReferenceProxies = 1;
 			preferredProjectObjectVersion = 77;
-			productRefGroup = 0E8863232DB0788B00D26262 /* Products */;
+			productRefGroup = 0E68FDAC2DB07F800071CCBA /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				0E8863212DB0788B00D26262 /* SkeletonLoadDemo */,
+				0E68FDAA2DB07F800071CCBA /* SkeletonLoadDemo */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		0E8863202DB0788B00D26262 /* Resources */ = {
+		0E68FDA92DB07F800071CCBA /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -125,7 +115,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		0E88631E2DB0788B00D26262 /* Sources */ = {
+		0E68FDA72DB07F800071CCBA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -135,7 +125,7 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		0E88632E2DB0788D00D26262 /* Debug */ = {
+		0E68FDB72DB07F820071CCBA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -198,7 +188,7 @@
 			};
 			name = Debug;
 		};
-		0E88632F2DB0788D00D26262 /* Release */ = {
+		0E68FDB82DB07F820071CCBA /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -254,7 +244,7 @@
 			};
 			name = Release;
 		};
-		0E8863312DB0788D00D26262 /* Debug */ = {
+		0E68FDBA2DB07F820071CCBA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -282,7 +272,7 @@
 			};
 			name = Debug;
 		};
-		0E8863322DB0788D00D26262 /* Release */ = {
+		0E68FDBB2DB07F820071CCBA /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -313,25 +303,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		0E88631D2DB0788B00D26262 /* Build configuration list for PBXProject "SkeletonLoadDemo" */ = {
+		0E68FDA62DB07F800071CCBA /* Build configuration list for PBXProject "SkeletonLoadDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				0E88632E2DB0788D00D26262 /* Debug */,
-				0E88632F2DB0788D00D26262 /* Release */,
+				0E68FDB72DB07F820071CCBA /* Debug */,
+				0E68FDB82DB07F820071CCBA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		0E8863302DB0788D00D26262 /* Build configuration list for PBXNativeTarget "SkeletonLoadDemo" */ = {
+		0E68FDB92DB07F820071CCBA /* Build configuration list for PBXNativeTarget "SkeletonLoadDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				0E8863312DB0788D00D26262 /* Debug */,
-				0E8863322DB0788D00D26262 /* Release */,
+				0E68FDBA2DB07F820071CCBA /* Debug */,
+				0E68FDBB2DB07F820071CCBA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 0E88631A2DB0788B00D26262 /* Project object */;
+	rootObject = 0E68FDA32DB07F800071CCBA /* Project object */;
 }
